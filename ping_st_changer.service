@@ -1,0 +1,10 @@
+[Unit]
+Description=Check the device is connected to LAN and change the state by its result
+
+[Service]
+Type=simple
+User=root
+ExecStart=ping_st_changer -dev [your device ipaddress] -timeout 1000ms -con http://192.168.254.2:3030/member/[your number]/state_str/stay -dis http://192.168.254.2:3030/member/[your number]/state_str/out
+
+[Install]
+WantedBy=multi-user.target

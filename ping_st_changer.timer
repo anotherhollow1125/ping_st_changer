@@ -1,0 +1,8 @@
+[Unit]
+Description=timer for ping_st_changer
+
+[Timer]
+OnUnitActiveSec=5m
+
+[Install]
+WantedBy=timers.target
